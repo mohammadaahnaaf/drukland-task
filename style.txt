@@ -1,0 +1,8 @@
+width: Hug (404.36px)px;
+height: Hug (521.26px)px;
+top: 294px;
+left: 1216px;
+padding: 32px 0px 0px 0px;
+gap: 10px;
+border-radius: 16px 0px 0px 0px;
+opacity: 0px;
