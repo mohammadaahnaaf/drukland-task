@@ -88,7 +88,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="max-w-[1320px] px-2 w-full mx-auto flex items-center justify-between py-4">
-          <Link href="/" className="text-2xl font-bold">
+          <Link href="/" className="text-2xl font-extrabold">
             Drukland.de
           </Link>
 
@@ -99,7 +99,7 @@ export default function HomePage() {
                 <NavigationMenuContent>
                   <div className="w-[400px] p-4">
                     <NavigationMenuLink asChild>
-                      <Link href="/business">Business Solutions</Link>
+                      <Link href="#">Business Solutions</Link>
                     </NavigationMenuLink>
                   </div>
                 </NavigationMenuContent>
@@ -109,14 +109,14 @@ export default function HomePage() {
                 <NavigationMenuContent>
                   <div className="w-[400px] p-4">
                     <NavigationMenuLink asChild>
-                      <Link href="/products">Our Products</Link>
+                      <Link href="#">Our Products</Link>
                     </NavigationMenuLink>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/about">About Us</Link>
+                  <Link href="#">About Us</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -169,11 +169,11 @@ export default function HomePage() {
 
         <div className="w-full max-w-[404px] min-h-[521px] rounded-xl bg-white p-8 shadow-sm">
           <div className="mb-8 text-center">
-            <h1 className="text-2xl font-bold">Drukland.de</h1>
+            <h1 className="text-2xl font-extrabold">Drukland.de</h1>
             <h2 className="text-xl">Sign In to your account</h2>
             <p className="text-sm text-muted-foreground">
               Don&apos;t you have an account?{" "}
-              <Link href="/register" className="font-semibold text-primary">
+              <Link href="#" className="font-semibold text-primary">
                 Register
               </Link>
             </p>
