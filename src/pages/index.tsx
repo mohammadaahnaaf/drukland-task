@@ -68,7 +68,7 @@ export default function HomePage() {
 
       <header className="bg-white border-b">
         <div className="bg-[#DDDDDD] border-b">
-          <div className="max-w-[1320px] w-full text-xs mx-auto flex justify-end gap-4 py-3">
+          <div className="max-w-[1320px] px-2 w-full text-xs mx-auto flex md:justify-end justify-center gap-4 py-3">
             <Link href="/faq" className="flex items-center gap-1 text-[#0B0B0B] hover:text-primary">
               <HelpCircle className="h-4 w-4" />
               FAQ
@@ -87,12 +87,12 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-        <div className="max-w-[1320px] w-full mx-auto flex items-center justify-between py-4">
+        <div className="max-w-[1320px] px-2 w-full mx-auto flex items-center justify-between py-4">
           <Link href="/" className="text-2xl font-bold">
             Drukland.de
           </Link>
 
-          <NavigationMenu>
+          <NavigationMenu className="hidden md:flex">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Business</NavigationMenuTrigger>
@@ -123,8 +123,8 @@ export default function HomePage() {
           </NavigationMenu>
 
           <div className="flex items-center gap-4">
-            <div className="relative w-[565px]">
-              <Input type="search" placeholder="Search" className="pl-8" />
+            <div className="relative xl:w-[565px] w-full">
+              <Input type="search" placeholder="Search" className="pl-8 !rounded-xl !ring-1 !ring-black/70" />
               <Button variant="ghost" size="icon" className="absolute left-2 top-1/2 -translate-y-1/2">
                 <span className="sr-only">Search</span>
                 <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -161,13 +161,13 @@ export default function HomePage() {
       </header>
 
 
-      <main className="max-w-[1320px] mx-auto justify-between items-center flex w-full py-8">
-        <div className="flex relative items-center max-w-[796px] h-[640px] w-full justify-center rounded-lg bg-white p-12">
+      <main className="max-w-[1320px] px-2 mx-auto justify-center xl:justify-between items-center flex w-full py-8">
+        <div className="xl:flex hidden relative items-center max-w-[796px] h-[640px] w-full justify-center rounded-lg bg-white p-12">
           <Image src='/cover.jpg' fill alt="cover-image" className="object-cover rounded-xl" />
         </div>
 
 
-        <div className="w-full max-w-[404px] h-[521px] rounded-xl bg-white p-8 shadow-sm">
+        <div className="w-full max-w-[404px] min-h-[521px] rounded-xl bg-white p-8 shadow-sm">
           <div className="mb-8 text-center">
             <h1 className="text-2xl font-bold">Drukland.de</h1>
             <h2 className="text-xl">Sign In to your account</h2>
@@ -187,10 +187,12 @@ export default function HomePage() {
           )}
 
           <form onSubmit={handleLogin} className="space-y-4">
-            <div className="space-y-2">
+            <div className="space-y-1 group">
+              <label htmlFor="email" className="text-sm group-focus-within:visible invisible duration-300 !font-bold">Email Address</label>
               <Input required onChange={(e) => setEmail(e.target.value)} value={email} type="email" placeholder="Email Address" />
             </div>
-            <div className="space-y-2">
+            <div className="space-y-1 group">
+              <label htmlFor="password" className="text-sm group-focus-within:visible invisible duration-300 group-focus-within:font-bold">Password</label>
               <Input required onChange={(e) => setPassword(e.target.value)} value={password} type="password" placeholder="Password" />
             </div>
 
@@ -252,9 +254,9 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="mt-auto">
-        <div className="max-w-[1320px] border-t border-[#292929] text-black w-full mx-auto flex items-center justify-between py-4 text-sm">
+        <div className="max-w-[1320px] px-2 border-t border-[#292929] text-black w-full mx-auto grid lg:flex items-center justify-center lg:justify-between py-4 text-sm">
           <p>All rights reserved © 2024 | Drukland.de</p>
-          <div className="flex gap-4">
+          <div className="lg:flex grid gap-4 w-full text-center lg:text-left">
             <Link href="/terms">Terms of Use</Link>
             <Link href="/sitemap">Sitemap</Link>
             <Link href="/company">Company information</Link>
